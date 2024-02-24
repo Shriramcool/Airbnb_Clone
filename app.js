@@ -44,16 +44,11 @@ app.get ("/listings/:id", async (req,res) => {
 
 // Create route 
 app.post("/listings", async (req, res) => {
-  let url = req.body.listing.image;
-  let filename ="random";
-  req.body.listing.image = {url,filename}; 
   const newListing = new Listing(req.body.listing);
   await newListing.save();
   res.redirect("/listings");
+ 
 });
-
-
-
 
 
 // app.get ("/testListing", async (req,res) => {
