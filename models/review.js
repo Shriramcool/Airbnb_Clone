@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const reviewSchema = new Schema({
-    Comment: {
+    comment: {
         type: String,
         required: true // Assuming Comment is required
     },
